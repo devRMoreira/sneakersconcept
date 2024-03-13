@@ -1,7 +1,6 @@
 import React from 'react';
 import ShoeCard from '@/frontend/components/ShoeCard';
 import Link from 'next/link';
-import PlantCard from '@/frontend/components/PlantCard';
 
 const TestVasco = () => (
     <div className="flex justify-center items-center h-screen bg-gray-100">
