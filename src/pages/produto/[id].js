@@ -76,12 +76,12 @@ const ProductPage = () => {
           {/* Heading */}
           <div className="flex justify-between mb-2 ">
             <div className="text-md font-semibold">Select Size</div>
-            <div className="text-md font-medium text-black/[.5] cursor-pointer">
+            {/* <div className="text-md font-medium text-black/[.5] cursor-pointer">
               Select Guide
-            </div>
+            </div> */}
           </div>
 
-          <div className="grid grid-cols-3 gap-2" id="sizesGrid">
+          <div className="grid grid-cols-3 gap-2" >
             {sapatilhaExemplo.quantidade.map((size) => (
               <div
                 key={size.tamanho}
