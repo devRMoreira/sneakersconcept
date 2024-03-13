@@ -10,7 +10,7 @@ import { MdShoppingCart } from "react-icons/md";
 
 const NavBar = () => {
   return (
-    <nav className="bg-red-500 p-4">
+    <nav className="bg-red-500 p-4 z-100">
       
        
         <div className="flex items-center space-x-4">
