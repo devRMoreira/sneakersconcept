@@ -1,10 +1,12 @@
-import { getFlashSales, getProduto } from "@/backend/services/produto"
+import { getFlashSales, getProduto } from "@/backend/data/produto"
 
 export default async function handler(req, res) {
 
   if (req.method === "GET") {
+    
+    const id = req.query.id
 
-    if (req.query.id === "flash") {
+    if (id === "flash") {
 
       const produtos = await getFlashSales()
 
@@ -13,13 +15,10 @@ export default async function handler(req, res) {
     }
 
 
-    const id = req.query.id
-
-
-
     const produto = await getProduto(id)
 
     return res.status(200).json(produto)
+    
   } else {
 
     return res.status(404).json(undefined)

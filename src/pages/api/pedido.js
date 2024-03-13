@@ -1,27 +1,30 @@
+import { inserirNovoPedido } from "@/backend/data/pedido"
+
 export default async function handler(req, res) {
 
-  if (req.method === "POST") {
+    if (req.method === "POST") {
 
-    if (req.query.id === "flash") {
+        const novoPedido = {
+            ...req.body,
+            dataPedido: new Date().getTime()
+        }
 
-      const produtos = await getFlashSales()
+        console.log(novoPedido)
 
-      return res.status(200).json(produtos)
+        const sucesso = await inserirNovoPedido(novoPedido)
+
+        if (sucesso.insertedId) {
+
+            return res.status(200).json(true)
+
+        } else {
+
+            return res.status(400).json(undefined)
+        }
+
+    } else {
+
+        return res.status(404).json(undefined)
 
     }
-
-
-    const id = req.query.id
-
-
-
-    const produto = await getProduto(id)
-
-    return res.status(200).json(produto)
-  } else {
-    return res.status(404).json(undefined)
-  }
-
-
-
 }
