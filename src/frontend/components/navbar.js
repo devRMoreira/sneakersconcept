@@ -26,6 +26,23 @@ const NavBar = () => {
     </div>
 
 
+    <nav className="">
+      
+       
+        <div className="absolute pt-30 ml-10 flex gap-4 pt-10">
+          <a href="./home" className="text-black flex items-center gap-4">
+          <PiSneakerFill  /> 
+          </a>
+          <a href="" className="flex items-center space-x-4 gap-4">
+            <IoSearch className="mr-2" /> 
+          </a>
+          <a href="" className="flex items-center space-x-4 gap-4">
+            <MdShoppingCart className="mr-2 " /> 
+          </a>
+          
+        </div>
+    
+    </nav>
   );
 };
 
