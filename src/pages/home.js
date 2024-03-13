@@ -78,9 +78,9 @@ export default function PedidoForm() {
 
   return (
     <div className="container mx-auto p-4">
-      {/* top bar com logo e search sneakers */}
+      
       <p>HomePage</p>
-      {/* navbar */}
+      
     </div>
   );
 }
