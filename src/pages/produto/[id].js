@@ -29,7 +29,7 @@ const ProductPage = () => {
   }
 
   return (
-    <section className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
+    <section className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px] p-4">
       <Image
         width={500}
         height={500}
