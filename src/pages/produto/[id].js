@@ -1,56 +1,56 @@
+import { fetchProduto } from "@/frontend/services/produtos";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const ProductPage = () => {
 
-  const sapatilhaExemplo = {
-    _id: "65f1aea6e6a0e41cf6583939",
-    marca: "Nike",
-    modelo: "Court Vision Low Nn",
-    foto: "https://i.imgur.com/pXcFq8m.png",
-    preco: 39.99,
-    quantidade: [
-      {
-        "tamanho": 38,
-        "stock": 0
-      },
-      {
-        tamanho: 39,
-        "stock": 1
-      },
-      {
-        tamanho: 40,
-        stock: 15
-      },
-      {
-        tamanho: 41,
-        stock: 10
-      }
-    ]
-  }
+  const [produto, setProduto] = useState({})
 
-  return (
+  const router = useRouter()
+
+  useEffect(() => {
+    if (!router.isReady) return;
+
+    const { id } = router.query
+
+    async function getProduto() {
+
+      const produto = await fetchProduto(id)
+
+      setProduto(produto)
+    }
+
+
+    getProduto()
+
+  }, [router.isReady]);
+
+
+
+  return (Object.keys(produto).length > 0 ?
     <section className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px] p-4">
       <Image
         width={500}
         height={500}
         alt="name"
-        src={"https://i.imgur.com/gS9DHPu.jpeg"}
+        src={produto.foto}
       />
       {/* Right Column - Prodct Details Section */}
       <div className="flex-1 py-3">
         {/* Product Tittle */}
         <h1 className="text-[34px] font-semibold mb-2 leading-tight">
-          {sapatilhaExemplo.modelo}
+          {produto.modelo}
         </h1>
 
         {/* Product Subtittle */}
-        <h2 className="text-lg font-semibold mb-5">{sapatilhaExemplo.marca}</h2>
+        <h2 className="text-lg font-semibold mb-5">{produto.marca}</h2>
 
         {/* Product Price */}
 
         <div className="flex items-center">
           <p className="mr-2 text-lg font-semibold">
-            {sapatilhaExemplo.preco} €
+            {produto.preco} €
           </p>
           {/* product.original_price && (
             <>
@@ -82,14 +82,20 @@ const ProductPage = () => {
           </div>
 
           <div className="grid grid-cols-3 gap-2" >
-            {sapatilhaExemplo.quantidade.map((size) => (
+            {produto.quantidade.map((ele) => ele.stock > 0 ?
               <div
-                key={size.tamanho}
+                key={ele.tamanho}
                 className="text-center py-2 rounded-md border border-black cursor-pointer"
               >
-                {size.tamanho}
+                {ele.tamanho}
               </div>
-            ))}
+              :
+              <div
+                key={ele.tamanho}
+                className="text-center py-2 rounded-md border bg-black bg-opacity-55 border-black cursor-pointer"
+              >
+                {ele.tamanho}
+              </div>)}
           </div>
 
 
@@ -112,7 +118,7 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section> : undefined
   );
 }
 
