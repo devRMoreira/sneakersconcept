@@ -13,7 +13,7 @@ export async function getProduto(id) {
 
 export async function getTodosProdutos() {
 
-    return await findDocuments({}, defaultCollection)
+    return await findDocuments({flash:false}, defaultCollection)
 }
 
 export async function getProdutosRandom(totalVendas) {
