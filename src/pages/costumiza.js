@@ -107,7 +107,7 @@ export default function PedidoForm() {
           <p className="text-center mt-4">Voltar para a página inicial</p>
         </Link> */}
 
-        <h2 className="text-2xl font-bold mt-4 text-center">Exemplos de sapatilhas costumizadas</h2>
+        <h2 className="text-2xl font-bold mt-4 text-center">As nossas sapatilhas costumizadas</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-center mt-4">
           {shoes.map((shoe) => (
             <div key={shoe._id} className="border p-4">
