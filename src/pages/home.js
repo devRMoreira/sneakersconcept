@@ -58,7 +58,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4 drop-shadow-xl">
 
             {produtos.produtos ? produtos.produtos.map((ele) => <Link href={`/produto/${ele._id}`}>
-              <img src={ele.foto} className="w-[181px] h-[190px] rounded-lg drop-shadow-xl" />
+              <Image src={ele.foto} width="180" height="150" className="w-[181px] h-[190px] rounded-lg drop-shadow-xl" />
             </Link>) : undefined}
           </div>
         </div>
