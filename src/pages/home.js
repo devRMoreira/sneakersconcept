@@ -1,9 +1,3 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-
-const inter = Inter({ subsets: ["latin"] });
-
 const sapatilhaExemplo = {
   _id: "65f1aea6e6a0e41cf6583939",
   marca: "Nike",
@@ -28,16 +22,4 @@ const sapatilhaExemplo = {
       stock: 10
     }
   ]
-}
-
-export default function Home() {
-  return (
-        <Image
-        src="/background.jpg"
-        alt="background"
-        layout="fill"
-        objectFit='cover'
-        />
-
-  );
 }
