@@ -4,8 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const shoes = [
-  // Add more shoe objects as needed
-
   {
     _id: "65f1aea6e6a0e41cf6583939",
     marca: "Nike",
