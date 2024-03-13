@@ -10,18 +10,18 @@ import { MdShoppingCart } from "react-icons/md";
 
 const NavBar = () => {
   return (
-    <nav className="bg-red-500 p-4">
+    <nav className="">
       
        
-        <div className="flex items-center space-x-4">
-          <a href="./home" className="text-black flex items-center">
+        <div className="absolute pt-30 ml-10 flex gap-4 pt-10">
+          <a href="./home" className="text-black flex items-center gap-4">
           <PiSneakerFill  /> 
           </a>
-          <a href="" className="text-whiteflex items-center">
+          <a href="" className="flex items-center space-x-4 gap-4">
             <IoSearch className="mr-2" /> 
           </a>
-          <a href="" className="text- flex items-center">
-            <MdShoppingCart className="mr-2" /> 
+          <a href="" className="flex items-center space-x-4 gap-4">
+            <MdShoppingCart className="mr-2 " /> 
           </a>
           
         </div>
