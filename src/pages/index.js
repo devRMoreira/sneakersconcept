@@ -1,14 +1,17 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { background } from "src/assets/background.jpeg";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div>
-        <img src="background"></img>
-    </div>
+        <Image
+        src="/background.jpg"
+        alt="background"
+        layout="fill"
+        objectFit='cover'
+        />
 
   );
 }
