@@ -1,17 +1,20 @@
-
+import Navbar from '@/frontend/components/navbar';
 import Link from 'next/link';
 import { useState } from 'react';
-import BottomNavBar from '@/frontend/components/navbar';
+import { Inter } from "next/font/google";
 
 export default function Home() {
   return (
     <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('/backg2.jpg')" }}>
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2">
-        <img src="/logobranco.png" alt="logo" className="w-68" />
+      <div className="absolute top-0 left-0 right-0 flex flex-col  items-center justify-center h-full">
+        <img src="/logobranco.png" alt="logo" className="w-60 h-25" /> 
+        <p className="text-white text-xl font-bold">Sneakers Team</p> 
+        <div>
+          <img src="/peeps.png" className='w-60'/>
+        </div>
       </div>
-
       <div className="flex justify-center">
-        <BottomNavBar />
+        <Navbar />
       </div>
     </div>
   );
