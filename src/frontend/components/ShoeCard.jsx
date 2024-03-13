@@ -14,17 +14,15 @@ const ShoeCard = ({ name, price, discounted }) => {
       <div className="p-4">
         <h3 className="text-gray-900 font-bold text-xl mb-2">{name}</h3>
         <div className="flex items-center">
-          <span
+          <p
             className={`text-lg font-bold ${
               discounted ? "line-through text-gray-500" : "text-indigo-500"
             }`}
           >
             ${price}
-          </span>
+          </p>
           {discounted && (
-            <span className="text-lg font-bold text-red-500 ml-2">
-              (Discounted)
-            </span>
+            <p className="text-lg font-bold text-red-500 ml-2">(Discounted)</p>
           )}
         </div>
       </div>
