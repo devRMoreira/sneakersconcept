@@ -62,46 +62,46 @@ const shoes = [
   },
 ];
 
-export default function Costumiza() {
 
+export default function Costumiza() {
   return (
     <>
-      <div className="container mx-auto p-4">
-        <h1 className="text-4xl font-bold text-center pb-4">Costumiza os teus sneakers!</h1>
-        <div className="w-full">
-          <Image src="https://i.imgur.com/gS9DHPu.jpeg" alt="background" width={400} height={200} className="mx-auto" />
-        </div>
-        {/*    <Link href="/home">
-          <p className="text-center mt-4">Voltar para a página inicial</p>
-        </Link> */}
+      <div className="inset-0 overflow-hidden bg-cover bg-center z-0 fixed" style={{ backgroundImage: "url('/backg2.jpg')" }} />
+      <div className="relative inset-0 flex flex-col items-center justify-center h-full bg-transparent">
 
-        <h2 className="text-2xl font-bold mt-4 text-center">As nossas sapatilhas costumizadas</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-center mt-4">
-          {shoes.map((shoe) => (
-            <div key={shoe._id} className="border p-4">
-              <Image
-                src={shoe.foto}
-                alt={`${shoe.marca} ${shoe.modelo}`}
-                width={300}
-                height={200}
-                placeholder="empty"
-                className="mx-auto"
-              />
-              <p className="text-center">{`${shoe.marca} ${shoe.modelo}`}</p>
-              <p className="text-center">{`Preço: ${shoe.preco}€`}</p>
-              <div className="flex items-center justify-center">
-                <button onClick={() => alert('O seu produto foi adicionado')} className="block mr-2">Adicionar ao Carrinho</button>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm0 0v4m0 0h14m-14 0l3 6h8l3-6m-11 5h6" />
-                </svg>
+        <div className="container mx-auto p-4 text-white">
+          <h1 className="text-5xl font-bold text-center pb-4">Costumiza os teus sneakers!</h1>
+          <div className="w-full">
+            <Image src="https://i.imgur.com/gS9DHPu.jpeg" alt="background" width={400} height={200} className="mx-auto rounded-xl" />
+          </div>
 
+          <h2 className="text-3xl font-bold mt-4 text-center">As nossas sapatilhas costumizadas</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-center mt-4">
+            {shoes.map((shoe) => (
+              <div key={shoe._id} className="border p-4 rounded-lg">
+                <Image
+                  src={shoe.foto}
+                  alt={`${shoe.marca} ${shoe.modelo}`}
+                  width={300}
+                  height={200}
+                  placeholder="empty"
+                  className="mx-auto rounded-xl"
+                />
+                <p className="text-lg text-center">{`${shoe.marca} ${shoe.modelo}`}</p>
+                <p className="text-lg text-center">{`Preço: ${shoe.preco}€`}</p>
+                <div className="flex items-center justify-center">
+                  <button onClick={() => alert('O seu produto foi adicionado')} className="block mr-2">Adicionar ao Carrinho</button>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm0 0v4m0 0h14m-14 0l3 6h8l3-6m-11 5h6" />
+                  </svg>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-      <div>
-        <BottomNavBar />
+        <div>
+          <BottomNavBar />
+        </div>
       </div>
     </>
   );
