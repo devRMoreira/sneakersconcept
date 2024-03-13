@@ -54,13 +54,13 @@ export default function Home() {
           </div>
         </div>
         <div className="transparent  w-[350px] rounded-lg p-4 mt-8 ">
-        <p className="text-white text-xl font-bold">Tendências</p>
-        <div className="grid grid-cols-2 gap-4 drop-shadow-xl">
+          <p className="text-white text-xl font-bold">Tendências</p>
+          <div className="grid grid-cols-2 gap-4 drop-shadow-xl">
 
-          {produtos.produtos ? produtos.produtos.map((ele) => <Link href={`/produto/${ele._id}`}>
-            <img src={ele.foto} className="w-[181px] h-[190px] rounded-lg drop-shadow-xl" />
-          </Link>) : undefined}
-        </div>
+            {produtos.produtos ? produtos.produtos.map((ele) => <Link href={`/produto/${ele._id}`}>
+              <img src={ele.foto} className="w-[181px] h-[190px] rounded-lg drop-shadow-xl" />
+            </Link>) : undefined}
+          </div>
         </div>
 
       </div>
