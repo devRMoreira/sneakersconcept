@@ -1,5 +1,6 @@
 // components/BottomNavBar.js
 import Link from 'next/link';
+import React from 'react';
 
 const BottomNavBar = () => {
     return (
@@ -14,4 +15,4 @@ const BottomNavBar = () => {
     );
 };
 
-export default BottomNavBar;
+export default React.memo(BottomNavBar)
