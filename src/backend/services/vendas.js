@@ -1,12 +1,3 @@
-import { findDocuments } from "../data/mongodb"
-
-const defaultCollection = "vendas"
-
-export async function getVendas() {
-
-    return await findDocuments({}, defaultCollection)
-}
-
 export async function calculaVendas(vendas) {
 
     let totalVendas = []
@@ -16,13 +7,15 @@ export async function calculaVendas(vendas) {
         const indexId = totalVendas.findIndex((ele) => ele.idProduto === vendas[i].idProduto) ?? -1
 
         if (indexId === -1) {
+
             totalVendas.push({
                 idProduto: vendas[i].idProduto,
                 quantidade: 1
             })
-        } else {
-            totalVendas[indexId].quantidade++
 
+        } else {
+
+            totalVendas[indexId].quantidade++
         }
     }
 
