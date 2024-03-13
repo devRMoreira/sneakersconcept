@@ -1,8 +1,6 @@
-import { getFlashSales, getProduto } from "@/backend/services/produto"
-
 export default async function handler(req, res) {
 
-  if (req.method === "GET") {
+  if (req.method === "POST") {
 
     if (req.query.id === "flash") {
 
@@ -21,7 +19,6 @@ export default async function handler(req, res) {
 
     return res.status(200).json(produto)
   } else {
-
     return res.status(404).json(undefined)
   }
 
