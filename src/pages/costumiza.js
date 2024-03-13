@@ -98,34 +98,39 @@ export default function PedidoForm() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      {/* top bar com logo e search sneakers */}
-      {/* Titulo */}
-      <h1 className="text-4xl font-bold">Costumiza os teus sneakers!</h1>
-      <Image src="https://i.imgur.com/gS9DHPu.jpeg" alt="background" width={300} height={200} />
+    <>
+      <div className="container mx-auto p-4">
+        {/* top bar com logo e search sneakers */}
+        {/* Titulo */}
+        <h1 className="text-4xl font-bold">Costumiza os teus sneakers!</h1>
+        <Image src="https://i.imgur.com/gS9DHPu.jpeg" alt="background" width={300} height={200} />
 
-      <Link href="/home">
-        <p>Voltar para a página inicial</p>
-      </Link>
-      {/* Exemplos de Sapatlinhas costumizadas */}
-      <h2 className="text-2xl font-bold mt-4">Exemplos de sapatilhas costumizadas</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt-4">
-        {shoes.map((shoe) => (
-          <div key={shoe._id} className="border p-4">
-            <Image
-              src={shoe.foto}
-              alt={`${shoe.marca} ${shoe.modelo}`}
-              width={300}
-              height={200}
-              placeholder="empty" // Use a placeholder image for better mobile performance
-            />
-            <p>{`${shoe.marca} ${shoe.modelo}`}</p>
-            <p>{`Preço: ${shoe.preco}€`}</p>
-            <button onClick={() => console.log('Add to cart clicked')}>Add to Cart</button>
-          </div>
-        ))}
+        <Link href="/home">
+          <p>Voltar para a página inicial</p>
+        </Link>
+        {/* Exemplos de Sapatlinhas costumizadas */}
+        <h2 className="text-2xl font-bold mt-4">Exemplos de sapatilhas costumizadas</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt-4">
+          {shoes.map((shoe) => (
+            <div key={shoe._id} className="border p-4">
+              <Image
+                src={shoe.foto}
+                alt={`${shoe.marca} ${shoe.modelo}`}
+                width={300}
+                height={200}
+                placeholder="empty" // Use a placeholder image for better mobile performance
+              />
+              <p>{`${shoe.marca} ${shoe.modelo}`}</p>
+              <p>{`Preço: ${shoe.preco}€`}</p>
+              <button onClick={() => alert('O seu produto foi adicionado')}>Adiconar ao Carrinho</button>
+            </div>
+          ))}
+        </div>
+
       </div>
-      <BottomNavBar />
-    </div>
+      <div>
+        <BottomNavBar />
+      </div>
+    </>
   );
 }
