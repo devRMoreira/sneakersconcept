@@ -1,4 +1,4 @@
-import BottomNavBar from "@/frontend/components/navbar";
+import NavBar from "@/frontend/components/navbar";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
 
       <ToastContainer autoClose={2500} />
       <Component {...pageProps} />
-      <BottomNavBar />
+      <NavBar />
 
     </div>
   }
