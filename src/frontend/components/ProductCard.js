@@ -22,7 +22,7 @@ const ProductCard = () => {
                     </p>
                     <>
                         <p className="text-base font-medium line-through">
-                            &#8377;57
+                            57€
                         </p>
 
                     </>
