@@ -32,12 +32,12 @@ const sapatilhaExemplo = {
 
 export default function Home() {
   return (
-        <Image
-        src="/background.jpg"
-        alt="background"
-        layout="fill"
-        objectFit='cover'
-        />
+    <Image
+      src="/background.jpg"
+      alt="background"
+      layout="fill"
+      objectFit='cover'
+    />
 
   );
 }

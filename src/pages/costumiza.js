@@ -100,17 +100,15 @@ export default function PedidoForm() {
   return (
     <>
       <div className="container mx-auto p-4">
-        {/* top bar com logo e search sneakers */}
-        {/* Titulo */}
-        <h1 className="text-4xl font-bold">Costumiza os teus sneakers!</h1>
-        <Image src="https://i.imgur.com/gS9DHPu.jpeg" alt="background" width={300} height={200} />
+        <h1 className="text-4xl font-bold text-center pb-4">Costumiza os teus sneakers!</h1>
+        <Image src="https://i.imgur.com/gS9DHPu.jpeg" alt="background" width={300} height={200} className="mx-auto" />
 
-        <Link href="/home">
-          <p>Voltar para a página inicial</p>
-        </Link>
-        {/* Exemplos de Sapatlinhas costumizadas */}
-        <h2 className="text-2xl font-bold mt-4">Exemplos de sapatilhas costumizadas</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt-4">
+        {/*    <Link href="/home">
+          <p className="text-center mt-4">Voltar para a página inicial</p>
+        </Link> */}
+
+        <h2 className="text-2xl font-bold mt-4 text-center">Exemplos de sapatilhas costumizadas</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-center mt-4">
           {shoes.map((shoe) => (
             <div key={shoe._id} className="border p-4">
               <Image
@@ -118,15 +116,15 @@ export default function PedidoForm() {
                 alt={`${shoe.marca} ${shoe.modelo}`}
                 width={300}
                 height={200}
-                placeholder="empty" // Use a placeholder image for better mobile performance
+                placeholder="empty"
+                className="mx-auto"
               />
-              <p>{`${shoe.marca} ${shoe.modelo}`}</p>
-              <p>{`Preço: ${shoe.preco}€`}</p>
-              <button onClick={() => alert('O seu produto foi adicionado')}>Adiconar ao Carrinho</button>
+              <p className="text-center">{`${shoe.marca} ${shoe.modelo}`}</p>
+              <p className="text-center">{`Preço: ${shoe.preco}€`}</p>
+              <button onClick={() => alert('O seu produto foi adicionado')} className="block mx-auto">Adicionar ao Carrinho</button>
             </div>
           ))}
         </div>
-
       </div>
       <div>
         <BottomNavBar />
