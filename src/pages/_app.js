@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-
 export const toastSucesso = (string) => toast.success(string)
 export const toastErro = (string) => toast.error(string)
+
 
 export default function App({ Component, pageProps }) {
 

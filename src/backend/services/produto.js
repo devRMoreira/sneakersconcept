@@ -1,21 +1,14 @@
-import { getProduto } from "../data/produto"
+import { getProdutosRandom } from "../data/produto"
+import { getVendas } from "../data/vendas"
+import { calculaVendas } from "./vendas"
 
-export async function getProdutosRandom(totalVendas) {
+export async function getFlashSales() {
 
-    const idPrimeiroProduto = totalVendas[Math.floor(Math.random() * 5)].idProduto
+    const vendas = await getVendas()
 
-    let idSegundoProduto = totalVendas[Math.floor(Math.random() * 5)].idProduto
+    const totalVendas = await calculaVendas(vendas)
 
+    const produtosRandom = await getProdutosRandom(totalVendas)
 
-    while (idSegundoProduto == idPrimeiroProduto) {
-
-        idSegundoProduto = totalVendas[Math.floor(Math.random() * 5)].idProduto
-        
-    }
-
-    const primeiroProduto = await getProduto(idPrimeiroProduto)
-
-    const segundoProduto = await getProduto(idSegundoProduto)
-
-    return [primeiroProduto, segundoProduto]
+    return produtosRandom
 }

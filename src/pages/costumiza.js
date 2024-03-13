@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
+
+
 const shoes = [
   {
     _id: "65f1aea6e6a0e41cf6583939",
@@ -60,47 +62,15 @@ const shoes = [
   },
 ];
 
-export default function PedidoForm() {
-  const [formData, setFormData] = useState({
-    email: '',
-    nome: '',
-    idade: '',
-    localidade: '',
-    marca: '',
-    modelo: '',
-    cor: '',
-    tamanho: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    setFormData({
-      email: '',
-      nome: '',
-      idade: '',
-      localidade: '',
-      marca: '',
-      modelo: '',
-      cor: '',
-      tamanho: '',
-    });
-  };
+export default function Costumiza() {
 
   return (
     <>
       <div className="container mx-auto p-4">
         <h1 className="text-4xl font-bold text-center pb-4">Costumiza os teus sneakers!</h1>
-        <Image src="https://i.imgur.com/gS9DHPu.jpeg" alt="background" width={300} height={200} className="mx-auto" />
-
+        <div className="w-full">
+          <Image src="https://i.imgur.com/gS9DHPu.jpeg" alt="background" width={400} height={200} className="mx-auto" />
+        </div>
         {/*    <Link href="/home">
           <p className="text-center mt-4">Voltar para a página inicial</p>
         </Link> */}
@@ -119,7 +89,13 @@ export default function PedidoForm() {
               />
               <p className="text-center">{`${shoe.marca} ${shoe.modelo}`}</p>
               <p className="text-center">{`Preço: ${shoe.preco}€`}</p>
-              <button onClick={() => alert('O seu produto foi adicionado')} className="block mx-auto">Adicionar ao Carrinho</button>
+              <div className="flex items-center justify-center">
+                <button onClick={() => alert('O seu produto foi adicionado')} className="block mr-2">Adicionar ao Carrinho</button>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm0 0v4m0 0h14m-14 0l3 6h8l3-6m-11 5h6" />
+                </svg>
+
+              </div>
             </div>
           ))}
         </div>
