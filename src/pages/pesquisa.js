@@ -23,6 +23,7 @@ export default function PesquisarProduto() {
         paddingLeft: '2rem',
         paddingRight: '2rem',
         textShadow: '10px 30px 4px rgba(0, 0, 0, 0.1)',
+       
           // Negrito
         // Adicione mais estilos conforme necessário
       };

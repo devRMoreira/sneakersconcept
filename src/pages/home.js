@@ -31,7 +31,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="relative ">
+    <div className="relative pb-12">
       <div className=" inset-0 overflow-hidden bg-cover bg-center z-0 fixed" style={{ backgroundImage: "url('/backg2.jpg')" }} />
       <div className="relative inset-0 flex flex-col items-center justify-center h-full bg-transparent">
         <img src="/logobranco.png" alt="logo" className="w-60 h-auto" />

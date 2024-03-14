@@ -1,3 +1,4 @@
+import TopNavBar from "@/frontend/components/TopNavBar";
 import NavBar from "@/frontend/components/navbar";
 import "@/styles/globals.css";
 import { useRouter } from "next/router";
@@ -22,8 +23,8 @@ export default function App({ Component, pageProps }) {
 
   } else {
 
-    return <div className="pb-12 relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('/backg2.jpg')" }}>
-
+    return <div className="mb-12 relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('/backg2.jpg')" }}>
+      <TopNavBar/>
       <ToastContainer autoClose={2500} />
       <Component {...pageProps} />
       <NavBar />

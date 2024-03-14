@@ -1,14 +1,14 @@
 export async function fetchFlashSales() {
-    const res = (await fetch(`http://localhost:3000/api/produto/flash`))
+    const res = (await fetch(`/api/produto/flash`))
     return await res.json()
 }
 
 export async function fetchTodosProdutos() {
-    const res = (await fetch(`http://localhost:3000/api/produto/todos`))
+    const res = (await fetch(`/api/produto/todos`))
     return await res.json()
 }
 
 export async function fetchProduto(id) {
-    const res = (await fetch(`http://localhost:3000/api/produto/${id}`))
+    const res = (await fetch(`/api/produto/${id}`))
     return await res.json()
 }

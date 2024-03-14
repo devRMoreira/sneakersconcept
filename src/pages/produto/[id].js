@@ -29,7 +29,20 @@ const ProductPage = () => {
 
 
   return (Object.keys(produto).length > 0 ?
-    <section className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px] p-4">
+    <section className="text-white flex flex-col lg:flex-row md:px-10 gap-[5px] lg:gap-[100px] p-4">
+      <h1 className="text-[24px] font-semibold  leading-tight">
+      {produto.marca} {produto.modelo}
+      </h1>
+
+
+      <div className="flex items-center">
+        <p className="mr-2 text-md pb- ">
+          {produto.preco} €
+        </p>
+
+      </div>
+
+
       <Image
         className="rounded-xl overflow-hidden bg-white cursor-pointer duration-200 transform"
 
@@ -38,20 +51,8 @@ const ProductPage = () => {
         alt="name"
         src={produto.foto}
       />
-      <div className="flex-1 py-3">
-        <h1 className="text-[34px] font-semibold mb-2 leading-tight">
-          {produto.modelo}
-        </h1>
+      <div className="flex-1 ">
 
-        <h2 className="text-lg font-semibold mb-5">{produto.marca}</h2>
-
-
-        <div className="flex items-center">
-          <p className="mr-2 text-lg font-semibold">
-            {produto.preco} €
-          </p>
-
-        </div>
         <div className="mb-10">
           <div className="flex justify-between mb-2 ">
             <div className="text-md font-semibold">Seleciona o Tamanho</div>
@@ -79,7 +80,7 @@ const ProductPage = () => {
         </div>
 
         <button
-          className="bg-amber-950  opacity-50 text-white font-bold py-2  px-28 text-xl rounded-full justify-center mt-5pt-3 pb-3">
+          className="bg-amber-950  opacity-50 text-white font-bold py-2  px-28 text-xl rounded-full justify-center  pt-3 pb-3">
           Adicionar ao Carrinho
         </button>
 
