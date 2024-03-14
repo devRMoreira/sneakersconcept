@@ -100,7 +100,7 @@ export default function Costumiza() {
           </div>
         </div>
         <div>
-          <BottomNavBar />
+          
         </div>
       </div>
     </>
