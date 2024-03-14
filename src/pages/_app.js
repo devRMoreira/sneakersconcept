@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
 
   } else {
 
-    return <div>
+    return <div className="pb-12">
 
       <ToastContainer autoClose={2500} />
       <Component {...pageProps} />

@@ -5,7 +5,7 @@ import { MdShoppingCart } from "react-icons/md";
 const BottomNavBar = () => {
   return (
     <div className="relative ">
-      <div className="sticky bottom-0 left-0 right-0 bg-white flex items-center p-4">
+      <div style={{ position: "fixed", bottom: 0 }} className=" bg-white flex items-center p-4">
         <div className="flex justify-between w-full">
           <a href="/home" className="text-black flex items-center">
             <PiSneakerFill />
