@@ -50,10 +50,11 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4 ">
 
             {produtos.flashSales ?
-              produtos.flashSales.map((ele) => <div className="bg-white rounded-lg overflow-hidden ">
+              produtos.flashSales.map((ele) => <div className=" rounded-lg overflow-hidden ">
                 <Link href={`/produto/${ele._id}`}>
                   <img src={ele.foto} className="w-[180px] h-[150px] rounded-lg drop-shadow-xl" />
                 </Link>
+                <span className="text-white line-through ml-2">{ele.preco}€ </span><span className="text-white ml-4">{Math.round(ele.preco * 0.7).toFixed(2)}€</span>
               </div>)
               : <div className="flex justify-center items-center h-full">
                 <Image src={"/loading.gif"} height={150} width={150} />
@@ -74,10 +75,10 @@ export default function Home() {
               <Image src={ele.foto} width="180" height="150" className="rounded-lg drop-shadow-xl" />
             </Link>)
               : <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('/backg2.jpg')" }}>
-              <div className="flex justify-center items-center h-full">
-                <Image src={"/loading.gif"} height={150} width={150} />
-              </div>
-            </div>}
+                <div className="flex justify-center items-center h-full">
+                  <Image src={"/loading.gif"} height={150} width={150} />
+                </div>
+              </div>}
           </div>
         </div>
       </div>

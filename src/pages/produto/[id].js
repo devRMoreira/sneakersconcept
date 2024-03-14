@@ -40,7 +40,8 @@ const ProductPage = () => {
 
       <div className="flex items-center">
         <p className="mr-2 text-md pb- ">
-          {produto.preco} €
+          {produto.flash? <span>{Math.round(produto.preco * 0.7).toFixed(2)}€</span> :
+          <span>{produto.preco} €</span>}
         </p>
 
       </div>
