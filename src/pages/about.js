@@ -10,7 +10,7 @@ const about = () => {
                 alt="Sneakers Concept"
                 src={"/logopreto.png"}
             />
-            <section className="mx-auto max-w-[700px] text-xl">
+            <section className="mx-auto max-w-[700px] text-xl text-justify p-2">
                 <p className="mt-2 mb-6">
                     <b>Sneakers Concept</b> é uma loja de calçado especializada em sapatilhas, localizada no encantador bairro de Aldoar, no Porto, Portugal. A nossa paixão pelas sapatilhas vai além do simples calçado; é uma verdadeira cultura que celebramos e partilhamos com a nossa comunidade.
                 </p>
