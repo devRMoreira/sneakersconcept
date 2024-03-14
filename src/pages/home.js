@@ -54,7 +54,10 @@ export default function Home() {
                 <Link href={`/produto/${ele._id}`}>
                   <img src={ele.foto} className="w-[180px] h-[150px] rounded-lg drop-shadow-xl" />
                 </Link>
-              </div>) : undefined}
+              </div>)
+              : <div className="flex justify-center items-center h-full">
+                <Image src={"/loading.gif"} height={150} width={150} />
+              </div>}
 
             <div className="bg-white rounded-lg overflow-hidden">
 
@@ -70,7 +73,10 @@ export default function Home() {
 
             {produtos.produtos ? produtos.produtos.map((ele) => <Link href={`/produto/${ele._id}`}>
               <Image src={ele.foto} width="180" height="150" className="rounded-lg drop-shadow-xl" />
-            </Link>) : undefined}
+            </Link>)
+              : <div className="flex justify-center items-center h-full">
+                <Image src={"/loading.gif"} height={150} width={150} />
+              </div>}
           </div>
         </div>
 

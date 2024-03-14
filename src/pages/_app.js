@@ -16,13 +16,13 @@ export default function App({ Component, pageProps }) {
   if (asPath === "/") {
     return <div>
 
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
 
     </div>
 
   } else {
 
-    return <div className="pb-12">
+    return <div className="pb-12 relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('/backg2.jpg')" }}>
 
       <ToastContainer autoClose={2500} />
       <Component {...pageProps} />
