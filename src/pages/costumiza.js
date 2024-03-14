@@ -78,7 +78,7 @@ export default function Costumiza() {
           <h2 className="text-3xl font-bold mt-4 text-center">As nossas sapatilhas costumizadas</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-center mt-4">
             {shoes.map((shoe) => (
-              <div key={shoe._id} className="border p-4 rounded-lg">
+              <div key={shoe._id} className=" drop-shadow-xl p-4 rounded-lg">
                 <Image
                   src={shoe.foto}
                   alt={`${shoe.marca} ${shoe.modelo}`}
