@@ -50,17 +50,17 @@ export default function PedidoForm() {
             <div className="container mx-auto p-4">
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                     <div>
-                        <h1 className="block mb-2 text-xl font-bold text-white mx-auto text-center">Tens um modelo específico de sapatilhas em mente? Diz-nos qual é!</h1>
+                        <h1 className="block mb-2 text-xl font-bold text-white mx-auto text-center mt-20">Tens um modelo específico de sapatilhas em mente? Diz-nos qual é!</h1>
                         <div
                             onClick={handleToggleInputs}
                             style={{
                                 cursor: 'pointer',
-                                backgroundColor: showInputs ? '#e5e5e5' : 'transparent',
+                                backgroundColor: showInputs ? 'textShadow: 10px 30px 4px rgba(0, 0, 0, 0.1)' : 'transparent',
                                 padding: '0.5rem',
                                 borderRadius: '0.5rem'
                             }}
                         >
-                            <button type="submit" className="bg-indigo-600  w-full  text-white ">Não sabes o que queres?</button>
+                            <button type="submit" className="bg-inherit w-full  text-white ">Não sabes o que queres?</button>
                         </div>
                     </div>
                     {showInputs && (

@@ -69,7 +69,7 @@ const ProductPage = () => {
               :
               <div
                 key={ele.tamanho}
-                className="text-center py-2 rounded-md border bg-black bg-opacity-55 border-black cursor-pointer"
+                className="text-center py-2 rounded-md border bg-black bg-opacity-55 border-black cursor-pointer "
               >
                 {ele.tamanho}
               </div>)}
@@ -79,8 +79,7 @@ const ProductPage = () => {
         </div>
 
         <button
-          className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
-        >
+          className="bg-amber-950  opacity-50 text-white font-bold py-2  px-28 text-xl rounded-full justify-center mt-5pt-3 pb-3">
           Adicionar ao Carrinho
         </button>
 
