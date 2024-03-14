@@ -15,7 +15,6 @@ export default async function handler(req, res) {
 
         const validacao = await validacaoLogin(utilizador)
 
-        console.log(validacao)
 
         if (validacao.utilizadorRegistado) {
 

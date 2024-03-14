@@ -9,8 +9,6 @@ export default async function handler(req, res) {
             dataPedido: new Date().getTime()
         }
 
-        console.log(novoPedido)
-
         const sucesso = await inserirNovoPedido(novoPedido)
 
         if (sucesso.insertedId) {
