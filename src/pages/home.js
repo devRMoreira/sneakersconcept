@@ -35,8 +35,10 @@ export default function Home() {
       <div className=" inset-0 overflow-hidden bg-cover bg-center z-0 fixed" style={{ backgroundImage: "url('/backg2.jpg')" }} />
       <div className="relative inset-0 flex flex-col items-center justify-center h-full bg-transparent">
         <img src="/logobranco.png" alt="logo" className="w-60 h-auto" />
+        <div className="flex ">
         <p className="text-white text-xl m-[10px] font-bold">Sneakers Team</p>
-        <img src="/peeps.png" alt="logo" className="w-[350px] h-auto" />
+        </div>
+        <img src="/peeps.png" alt="logo" className="w-[350px] h-auto"  />
         <div className="bg-sky-950 w-[343px] rounded-[15px] p-4 mt-8 ">
           <div className="flex justify-between ">
           <p className="text-white text-lg font-bold mb-4 ">Saldos</p>
@@ -59,8 +61,8 @@ export default function Home() {
         </div>
         <div className="transparent  w-[343px] rounded-lg p-4 mt-8 ">
         <div className="flex justify-between ">
-          <p className="text-white text- mb-4  font-bold">Tendências</p>
-          <p className="text-gray-700 text-lg mb-4  font-bold">Ver Todas</p>
+          <p className="text-white text-lg mb-4  font-bold">Tendências</p>
+          
         </div>
           <div className="grid grid-cols-2 gap-4 drop-shadow-xl">
 
