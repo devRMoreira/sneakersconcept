@@ -60,36 +60,36 @@ export default function PedidoForm() {
                                 borderRadius: '0.5rem'
                             }}
                         >
-                            <h2 className="block mb-2 text-white"> Não sabes o que queres?</h2>
+                            <button type="submit" className="bg-indigo-600  w-full  text-white ">Não sabes o que queres?</button>
                         </div>
                     </div>
                     {showInputs && (
-                        <div>
-                            <label className="block mb-2 text-white">
+                        <div className='bg-white text-blue p-10'>
+                            <label className="block mb-4 text bl">
                                 Email:
-                                <input type="email" name="email" value={formData.email} onChange={handleChange} /* required */ className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black" />
+                                <input type="email" name="email" value={formData.email} onChange={handleChange}  className="mt-1 block w-full  border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black" />
                             </label>
-                            <label className="block mb-2 text-white">
+                            <label className="block mb-4">
                                 Nome:
                                 <input type="text" name="nome" value={formData.nome} onChange={handleChange} placeholder="Opcional" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black" />
                             </label>
-                            <label className="block mb-2 text-white">
+                            <label className="block mb-4">
                                 Idade:
                                 <input type="number" name="idade" value={formData.idade} onChange={handleChange} placeholder="Opcional" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black" />
                             </label>
-                            <label className="block mb-2 text-white">
+                            <label className="block mb-4">
                                 Localidade:
                                 <input type="text" name="localidade" value={formData.localidade} onChange={handleChange} placeholder="Opcional" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black" />
                             </label>
-                            <label className="block mb-2 text-white">
+                            <label className="block mb-2">
                                 Marca:
                                 <input type="text" name="marca" value={formData.marca} onChange={handleChange} placeholder="Opcional" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black" />
                             </label>
-                            <label className="block mb-2 text-white">
+                            <label className="block mb-2">
                                 Modelo:
                                 <input type="text" name="modelo" value={formData.modelo} onChange={handleChange} placeholder="Opcional" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black" />
                             </label>
-                            <label className="block mb-2 text-white">
+                            <label className="block mb-2">
                                 Cor:
                                 <input type="text" name="cor" value={formData.cor} onChange={handleChange} placeholder="Opcional" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black" />
                             </label>
