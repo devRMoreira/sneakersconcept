@@ -1,7 +1,10 @@
-import Link from 'next/link';
+import { fetchForm } from '@/frontend/services/form';
 import { useState } from 'react';
+import { toastErro, toastSucesso } from './_app';
+import TopNavBar from '@/frontend/components/TopNavBar';
 
 export default function PedidoForm() {
+
     const [formData, setFormData] = useState({
         email: '',
         nome: '',
@@ -28,23 +31,29 @@ export default function PedidoForm() {
         setShowInputs(!showInputs);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setFormData({
-            email: '',
-            nome: '',
-            idade: '',
-            localidade: '',
-            marca: '',
-            modelo: '',
-            cor: '',
-            tamanho: '',
-            tipo: ''
-        });
+        const form = await fetchForm(formData)
+        if (form.ok) {
+            setFormData({
+                email: '',
+                nome: '',
+                idade: '',
+                localidade: '',
+                marca: '',
+                modelo: '',
+                cor: '',
+                tamanho: '',
+                tipo: ''
+            });
+            toastSucesso("Submetido com sucesso, aguarda o nosso contacto!")
+        }
+
     };
 
     return (
         <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('/backg2.jpg')" }}>
+            <TopNavBar />
             <div className="container mx-auto p-4 pt">
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col justify-end">
                     <div>
@@ -115,7 +124,6 @@ export default function PedidoForm() {
                         </div>
 
                     )}
-                    {/* <button type="submit" className=" w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brown-700">Enviar Pedido</button> */}
                     <button className="bg-amber-950 ml-1/2 opacity-80 text-white font-bold py-2 text-lg mt-3 rounded-full" type='submit'>Submete o teu pedido</button>
 
                 </form>
