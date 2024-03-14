@@ -58,10 +58,8 @@ async function setFlashSales(idPrimeiro, idSegundo) {
 
             const cenas = await updateOneDocument(filter, update, defaultCollection)
 
-            console.log(cenas)
 
         } else {
-            console.log("false")
             const update = {
                 $set: {
                     flash: false
@@ -70,7 +68,6 @@ async function setFlashSales(idPrimeiro, idSegundo) {
 
             const cenas = await updateOneDocument(filter, update, defaultCollection)
 
-            console.log(cenas)
         }
     }
 

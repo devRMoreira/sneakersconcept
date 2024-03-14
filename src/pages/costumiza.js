@@ -2,6 +2,7 @@ import BottomNavBar from '@/frontend/components/navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 
 
@@ -78,7 +79,7 @@ export default function Costumiza() {
           <h2 className="text-3xl font-bold mt-4 text-center">As nossas sapatilhas costumizadas</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 justify-center mt-4">
             {shoes.map((shoe) => (
-              <div key={shoe._id} className="border p-4 rounded-lg">
+              <div key={shoe._id} className=" drop-shadow-xl p-4 rounded-lg">
                 <Image
                   src={shoe.foto}
                   alt={`${shoe.marca} ${shoe.modelo}`}
@@ -90,7 +91,7 @@ export default function Costumiza() {
                 <p className="text-lg text-center">{`${shoe.marca} ${shoe.modelo}`}</p>
                 <p className="text-lg text-center">{`Preço: ${shoe.preco}€`}</p>
                 <div className="flex items-center justify-center">
-                  <button onClick={() => alert('O seu produto foi adicionado')} className="block mr-2">Adicionar ao Carrinho</button>
+                  <button onClick={() => toast.success('O seu produto foi adicionado')} className="block mr-2">Adicionar ao Carrinho</button>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm0 0v4m0 0h14m-14 0l3 6h8l3-6m-11 5h6" />
                   </svg>
@@ -100,7 +101,7 @@ export default function Costumiza() {
           </div>
         </div>
         <div>
-          
+
         </div>
       </div>
     </>

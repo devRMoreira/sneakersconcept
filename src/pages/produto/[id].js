@@ -85,7 +85,12 @@ const ProductPage = () => {
 
 
       </div>
-    </section> : undefined
+    </section> : <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('/backg2.jpg')" }}>
+      <div className="flex justify-center items-center h-full">
+        <Image src={"/loading.gif"} height={150} width={150} />
+      </div>
+    </div>
+
   );
 }
 
