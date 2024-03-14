@@ -3,14 +3,14 @@ import React from "react";
 
 const about = () => {
     return (
-        <div className="p-4" relative bg-cover bg-center h-screen style={{ backgroundImage: "url('/backg2.jpg')" }}>
+        <div className="p-4">
             <Image
                 width={500}
                 height={100}
                 alt="Sneakers Concept"
-                src={"/logobranco.png"}
+                src={"/logopreto.png"}
             />
-            <section className="mx-auto max-w-[700px] text-white text-xl">
+            <section className="mx-auto max-w-[700px] text-xl">
                 <p className="mt-2 mb-6">
                     <b>Sneakers Concept</b> é uma loja de calçado especializada em sapatilhas, localizada no encantador bairro de Aldoar, no Porto, Portugal. A nossa paixão pelas sapatilhas vai além do simples calçado; é uma verdadeira cultura que celebramos e partilhamos com a nossa comunidade.
                 </p>
@@ -31,9 +31,7 @@ const about = () => {
                     A nossa missão na Sneakers Concept é simples: oferecer a melhor seleção de sapatilhas de qualidade, combinada com um serviço excepcional, para que os nossos clientes possam encontrar calçado que os inspire e os capacite a alcançar os seus objetivos, seja na moda, no desporto ou na vida quotidiana.
                 </p>
             </section>
-            
         </div>
-        
     );
 };
 
