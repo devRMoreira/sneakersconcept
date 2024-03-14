@@ -36,9 +36,9 @@ export default function Home() {
 
   return (
     <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('/backg.jpg')" }}>
-      <div className="absolute inset-x-0 bottom-8 flex justify-center pb-0">
+      <div className="absolute inset-x-0 bottom-8 flex justify-center pb-7">
         <Link href="/home">
-          <button className="bg-amber-950  opacity-80 text-white font-bold py-4 text-lg px-20 rounded-full">
+          <button className="bg-amber-950  opacity-50 text-white font-bold py-8 text-lg px-32 rounded-full">
             Entrar
           </button>
         </Link>

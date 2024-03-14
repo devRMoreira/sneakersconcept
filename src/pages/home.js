@@ -39,8 +39,8 @@ export default function Home() {
         <img src="/peeps.png" alt="logo" className="w-[350px] h-auto" />
         <div className="bg-sky-950 w-[343px] rounded-[15px] p-4 mt-8 ">
           <div className="flex justify-between ">
-          <p className="text-white text-lg font-bold mb-4 ">Saldos</p>
-          <p className="text-white text-lg font-bold mb-4  ">30%</p>
+            <p className="text-white text-lg font-bold mb-4 ">Saldos</p>
+            <p className="text-white text-lg font-bold mb-4  ">30%</p>
           </div>
 
           <div className="grid grid-cols-2 gap-4 ">
@@ -51,17 +51,15 @@ export default function Home() {
                   <img src={ele.foto} className="w-[180px] h-[150px] rounded-lg drop-shadow-xl" />
                 </Link>
               </div>) : undefined}
-
             <div className="bg-white rounded-lg overflow-hidden">
-
             </div>
           </div>
         </div>
         <div className="transparent  w-[343px] rounded-lg p-4 mt-8 ">
-        <div className="flex justify-between ">
-          <p className="text-white text- mb-4  font-bold">Tendências</p>
-          <p className="text-gray-700 text-lg mb-4  font-bold">Ver Todas</p>
-        </div>
+          <div className="flex justify-between ">
+            <p className="text-white text- mb-4  font-bold">Tendências</p>
+            <p className="text-gray-700 text-lg mb-4  font-bold">Ver Todas</p>
+          </div>
           <div className="grid grid-cols-2 gap-4 drop-shadow-xl">
 
             {produtos.produtos ? produtos.produtos.map((ele) => <Link href={`/produto/${ele._id}`}>
@@ -69,9 +67,7 @@ export default function Home() {
             </Link>) : undefined}
           </div>
         </div>
-
       </div>
-
     </div>
   );
 }

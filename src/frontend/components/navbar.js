@@ -10,11 +10,11 @@ const BottomNavBar = () => {
           <a href="/home" className="text-black flex items-center">
             <PiSneakerFill />
           </a>
-          <a href="#" className="text-black flex items-center ml-auto">
-            <IoSearch className="mr-2" />
+          <a href="" className="text-black flex items-center ml-auto">
+            <IoSearch  />
           </a>
-          <a href="#" className="text-black flex items-center">
-            <MdShoppingCart className="mr-2" />
+          <a href="" className="text-black flex items-center">
+            <MdShoppingCart  />
           </a>
         </div>
       </div>
