@@ -73,9 +73,11 @@ export default function Home() {
             {produtos.produtos ? produtos.produtos.map((ele) => <Link href={`/produto/${ele._id}`}>
               <Image src={ele.foto} width="180" height="150" className="rounded-lg drop-shadow-xl" />
             </Link>)
-              : <div className="flex justify-center items-center h-full">
+              : <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url('/backg2.jpg')" }}>
+              <div className="flex justify-center items-center h-full">
                 <Image src={"/loading.gif"} height={150} width={150} />
-              </div>}
+              </div>
+            </div>}
           </div>
         </div>
       </div>

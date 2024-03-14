@@ -1,20 +1,19 @@
-import { PiSneakerFill } from "react-icons/pi";
-import { IoSearch } from "react-icons/io5";
-import { MdShoppingCart } from "react-icons/md";
 import React from "react";
 import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const TopNavBar = () => {
+  const router = useRouter()
+
   return (
     <div className="relative ">
       <div className="h-fit  flex items-center p-4   ">
-        {/* <div className="grid grid-cols-3  place-content-around pl-5"> */}
-          <a href="/home" className="text-white ">
-            <IoIosArrowBack size={22}/>
-          </a>
-         <div className=" w-full flex justify-center "> <Image src="/logobranco.png" height={60} width={60}/></div>
-        {/* </div> */}
+        <Link href="" onClick={() => router.back()} className="text-white ">
+          <IoIosArrowBack size={22} />
+        </Link>
+        <div className=" w-full flex justify-center "> <Image src="/logobranco.png" height={60} width={60} /></div>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import TopNavBar from "@/frontend/components/TopNavBar";
 import { fetchProduto } from "@/frontend/services/produtos";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -29,9 +30,11 @@ const ProductPage = () => {
 
 
   return (Object.keys(produto).length > 0 ?
+
     <section className="text-white flex flex-col lg:flex-row md:px-10 gap-[5px] lg:gap-[100px] p-4">
+      <TopNavBar />
       <h1 className="text-[24px] font-semibold  leading-tight">
-      {produto.marca} {produto.modelo}
+        {produto.marca} {produto.modelo}
       </h1>
 
 
